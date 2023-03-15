@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 
 
 app.get('/api/events', async (req, res) =>{
-
+ 
     //real connection with the DB eventonica
     try{
         const { rows: events } = await db.query('SELECT * FROM events');
