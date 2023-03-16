@@ -1,11 +1,15 @@
 import { useState } from "react";
 
-
+const handleTitleChange = (e) => {
+    e.preventDefault();
+    let newTitle = e.target.value;
+    console.log(newTitle);
+}
 
 const FormEvent = () => {
     const [event, setEvent] = useState({title: "", location:"", eventtime: ""})
     return (
-        <form onSubmit={handleSubmit}>
+        <form>
             <label>Title</label>
             <input
             type="text"
