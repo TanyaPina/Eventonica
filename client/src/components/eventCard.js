@@ -11,6 +11,7 @@ const EventCard = (props) =>{
       <Card.Text>
         {props.location}
       </Card.Text>
+      <button className="btn btn-danger">Delete</button>
     </Card.Body>
   </Card>
   )}
