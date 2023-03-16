@@ -7,25 +7,30 @@ const FormEvent = () => {
         e.preventDefault();
         let newTitle = e.target.value;
         setEvent((event) => ({...event, title: newTitle}));
-        console.log(event.title);
+        //console.log(event.title);
     }
     
     const handleLocationChange = (e) => {
         e.preventDefault();
         let newLocation = e.target.value;
         setEvent((event) => ({...event, location: newLocation}));
-        console.log(event.location);
+        //console.log(event.location);
     }
 
     const handleDateChange = (e) => {
         e.preventDefault();
         let newDate = e.target.value;
         setEvent((event) => ({...event, eventtime: newDate}));
-        console.log(event.eventtime);
+        //console.log(event.eventtime);
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setEvent(event);
+        console.log(event);
     }
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <label>Title</label>
             <input
                 type="text"
@@ -52,6 +57,7 @@ const FormEvent = () => {
                 value={event.eventtime} //state
                 onChange={handleDateChange}
             />
+            <button type="submit">Add Event</button>
         </form>
     )
 }
