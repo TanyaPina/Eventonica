@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-const [event, setEvent] = useState({title: "", location:"", eventtime: ""})
+
 
 const FormEvent = () => {
+    const [event, setEvent] = useState({title: "", location:"", eventtime: ""})
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <label>Title</label>
             <input
             type="text"
