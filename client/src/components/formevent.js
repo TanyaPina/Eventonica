@@ -16,7 +16,14 @@ const FormEvent = () => {
         setEvent((event) => ({...event, location: newLocation}));
         console.log(event.location);
     }
-    
+
+    const handleDateChange = (e) => {
+        e.preventDefault();
+        let newDate = e.target.value;
+        setEvent((event) => ({...event, eventtime: newDate}));
+        console.log(event.eventtime);
+    }
+
     return (
         <form>
             <label>Title</label>
@@ -36,6 +43,14 @@ const FormEvent = () => {
                 required
                 value={event.location} //state
                 onChange={handleLocationChange}
+            />
+            <label>Date</label>
+            <input
+                type="date"
+                id="add-event-date"
+                placeholder="The Date of Your Event"
+                value={event.eventtime} //state
+                onChange={handleDateChange}
             />
         </form>
     )
