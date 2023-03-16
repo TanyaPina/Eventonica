@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import EventCard from "./eventCard";
 import CardGroup from 'react-bootstrap/CardGroup';
-import Badge from 'react-bootstrap/Badge';
 import FormEvent from "./formevent";
 
 
@@ -39,7 +38,6 @@ function Events() {
             {events.map(event =>
             <EventCard key={event.id} title={event.title} location={event.location} time={event.eventtime}/>
             )}
-            <Badge bg="primary">New</Badge> {/*added from bootstrap, testing */}
     </CardGroup>
     <FormEvent postRequest={postRequest}/>
     </div>
