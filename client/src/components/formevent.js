@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const FormEvent = () => {
+const FormEvent = (props) => {
     const [event, setEvent] = useState({ title: "", location: "", eventtime: "" })
 
     const handleTitleChange = (e) => {
@@ -26,7 +26,7 @@ const FormEvent = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setEvent(event);
-        console.log(event);
+        props.postRequest(event);
     }
 
     return (
