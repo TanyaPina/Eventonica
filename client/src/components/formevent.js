@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
 
 const FormEvent = (props) => {
     const [event, setEvent] = useState({ title: "", location: "", eventtime: "" })
@@ -54,7 +55,7 @@ const FormEvent = (props) => {
                 value={event.eventtime} //state
                 onChange={handleDateChange}
             />
-            <button type="submit">Add Event</button>
+            <Button type="submit" id="addbutton" variant="primary">Add Event</Button>
         </form>
     )
 }
