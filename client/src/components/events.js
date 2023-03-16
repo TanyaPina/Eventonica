@@ -16,8 +16,7 @@ function Events() {
             });
           }, []);
   
-          const postRequest = (newEvent) => {
-            //console.log("From the parent", newEvent);
+          const postRequest = (newEvent) => {;
             return fetch("http://localhost:8080/api/events", {
               method: "POST",
               headers: {"Content-Type": "application/json"},
@@ -27,7 +26,6 @@ function Events() {
               return response.json();
             })
             .then((data) => {
-              //console.log(data);
               setEvents((events) => [...events, data])
             })
           }
@@ -36,7 +34,7 @@ function Events() {
     <div>
     <CardGroup className="Events">
             {events.map(event =>
-            <EventCard key={event.id} title={event.title} location={event.location} time={event.eventtime}/>
+            <EventCard key={event.id} title={event.title} location={event.location} time={event.eventtime} /> 
             )}
     </CardGroup>
     <FormEvent postRequest={postRequest}/>
