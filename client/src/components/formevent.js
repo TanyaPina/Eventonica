@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from 'react-bootstrap/Button';
+import './formeventstyles.css';
 
 const FormEvent = (props) => {
     const [event, setEvent] = useState({ title: "", location: "", eventtime: "" })
