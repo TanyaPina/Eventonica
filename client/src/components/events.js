@@ -12,7 +12,6 @@ function Events() {
           .then((response) => response.json())
           .then(events => {
             setEvents(events); 
-            console.log('Events fetched...', events);
             });
           }, []);
   
