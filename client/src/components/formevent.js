@@ -24,7 +24,6 @@ const FormEvent = (props) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        setEvent(event);
         props.postRequest(event);
     }
 
