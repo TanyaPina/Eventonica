@@ -31,14 +31,14 @@ function Events() {
           }
 
   return (
-    <div>
+    <>
     <CardGroup className="Events">
             {events.map(event =>
             <EventCard key={event.id} title={event.title} location={event.location} time={event.eventtime} /> 
             )}
     </CardGroup>
     <FormEvent postRequest={postRequest}/>
-    </div>
+    </>
   );
 }
 
