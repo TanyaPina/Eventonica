@@ -16,3 +16,4 @@ const EventCard = (props) =>{
   )}
 
 export default EventCard;
+//this is creating a card, is the child of events.js and is getting props from it 
